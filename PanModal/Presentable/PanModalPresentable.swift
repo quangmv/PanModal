@@ -159,6 +159,13 @@ public protocol PanModalPresentable: AnyObject {
     var showDragIndicator: Bool { get }
 
     /**
+     A flag to determine what should happen when background is tapped.
+     
+     Default value is false.
+     */
+    var dismissOnOutsideTap: Bool { get }
+
+    /**
      Asks the delegate if the pan modal should respond to the pan modal gesture recognizer.
      
      Return false to disable movement on the pan modal but maintain gestures on the presented view.

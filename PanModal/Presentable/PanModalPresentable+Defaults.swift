@@ -88,6 +88,10 @@ public extension PanModalPresentable where Self: UIViewController {
         return shouldRoundTopCorners
     }
 
+    var dismissOnOutsideTap: Bool {
+        return false
+    }
+
     func shouldRespond(to panModalGestureRecognizer: UIPanGestureRecognizer) -> Bool {
         return true
     }

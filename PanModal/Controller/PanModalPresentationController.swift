@@ -111,7 +111,9 @@ public class PanModalPresentationController: UIPresentationController {
             view = DimmedView()
         }
         view.didTap = { [weak self] _ in
-            self?.dismissPresentedViewController()
+            if let dismissOnOutsideTap = self?.presentable?.dismissOnOutsideTap, dismissOnOutsideTap {
+                self?.dismissPresentedViewController()
+            }
         }
         return view
     }()
