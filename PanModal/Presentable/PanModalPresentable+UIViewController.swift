@@ -54,7 +54,7 @@ public extension PanModalPresentable where Self: UIViewController {
 
      This can be used for animation consistency on views within the presented view controller.
      */
-    func panModalAnimate(_ animationBlock: @escaping AnimationBlockType, _ completion: AnimationCompletionType? = nil) {
+    func panModalAnimate(animationBlock: @escaping AnimationBlockType, completion: AnimationCompletionType? = nil) {
         PanModalAnimator.animate(animationBlock, config: self, completion)
     }
 
